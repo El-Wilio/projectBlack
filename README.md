@@ -29,7 +29,7 @@ Currently working on tweaking the User model.
 * [ ] Finalize the User model
 * [ ] Make a standard registration system that follows the guideline of the model (restrictions and what not)
 * [ ] Build a standard profile page from scratch and make editable
-* 
+
 * [ ] Create the Club model
 * [ ] Create the club controller that will have the following methods : new, create, edit, view, delete
 * [ ] Create the club views for the controller's method.
