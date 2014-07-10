@@ -1,6 +1,6 @@
 # README
 
-Project Black is a social network project that is powered by the choice of anonimity or karma whoring
+Project Black is a code name for a social network project built in rails. More specifically, it is a social network built around the idea of clubs and the choice of anonimity.
 
 ## System Specifications
 
@@ -12,7 +12,7 @@ Project Black is a social network project that is powered by the choice of anoni
 
 * Javascript interpreter to install Devise (JSON is a popular one).
 * Openssl
-* Postgres 9.3 or higher
+* Postgres 9.3 or higher when it will pass the alpha stage
 
 ## Gemfile
 
