@@ -26,7 +26,7 @@ Currently working on tweaking the User model.
 
 ##To do list for now
 
-[ ] Finalize the User model
+[] Finalize the User model
 [ ] Make a standard registration system that follows the guideline of the model (restrictions and what not)
 [ ] Build a standard profile page from scratch and make editable
 
