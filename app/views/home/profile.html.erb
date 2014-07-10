@@ -1,0 +1,7 @@
+<H1> Profile Page </h1>
+
+<% if user_signed_in? %>
+<p>Welcome home <%= current_user.email %></p>
+<% else %>
+<p>You have no reason to be here</p>
+<% end %>

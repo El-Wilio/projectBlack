@@ -1,0 +1,21 @@
+<h2>Sign up</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+  <div class="input_wrapper">
+    <div class="form-inputs">
+      <%= f.label :email %><br>
+      <%= f.email_field :email, required: true, size: 60, class: "form_class", autofocus: true %><br>
+      <%= f.label :password %><br>
+      <%= f.password_field :password, size: 60, required: true %><br>
+      <%= f.label :password_confirmation %><br>
+      <%= f.password_field :password_confirmation, size: 60, required: true %>
+    </div>
+ 
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

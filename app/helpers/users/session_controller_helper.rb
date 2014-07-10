@@ -1,0 +1,2 @@
+module Users::SessionControllerHelper
+end
