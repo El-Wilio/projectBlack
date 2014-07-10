@@ -1,20 +1,20 @@
-== README
+# README
 
 Project Black is a social network project that is powered by the choice of anonimity or karma whoring
 
-=== System Specifications
+## System Specifications
 
 * Ruby version: ruby 2.1.2p95
 
 * Rails version: 4.1.4
 
-=== Requirements
+## Requirements
 
 * Javascript interpreter to install Devise (JSON is a popular one).
 * Openssl
 * Postgres 9.3 or higher
 
-== Gemfile
+## Gemfile
 
 This is an exact copy of the gemfile
 
