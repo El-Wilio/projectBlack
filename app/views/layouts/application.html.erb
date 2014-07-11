@@ -8,7 +8,20 @@
 
 </head>
 <body>
-<div id="menu"></div>
+<div id="menu">
+  <%= link_to "Home", "/" %>
+  <%= link_to "Clubs", "/" %>
+  <% if user_signed_in? %>
+  <%= link_to "Profile", "/home/profile" %>
+  <% else %>
+  <%= link_to "Sign in", "/users/sign_in" %>
+  <% end %>
+  <% if !user_signed_in? %>
+  <%= link_to("/users/sign_up") do %>
+  <span style="font-size: 14px; position: absolute; right: 2em">Join the club</span>
+  <% end %>
+  <% end %>
+</div>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <div id="content">

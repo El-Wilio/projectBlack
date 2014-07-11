@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
@@ -42,6 +41,8 @@ gem 'simple_form', '~> 3.0.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'rb-readline'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
