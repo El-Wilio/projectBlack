@@ -16,8 +16,9 @@ Project Black is a code name for a social network project built in rails. More s
 
 ## Gemfile
 
-This is an exact copy of the gemfile
-
+Nothing to fancy in the Gemfile, you just have to run bundle install. If somehow you need to reinstall Devise from the get-go, you'd might want to check their git page. You would also need a javascript interpreter (sudo apt-get install JSON for linux users).
+ 
+also the Gemfile is not absolute, some gems will be removed, some will be added. What is certain tho, is that Sqlite3 will be removed in favor of Postgresql. There's no reason to make a switch now since everything is so simple, but it would have to be soon since Heroku is anti sqlite3 for some reason.
 ## Working Log
 
 * July 10th 2014
@@ -46,6 +47,3 @@ Currently working on tweaking the User model.
 - [ ] Create the posts Controller that will have the following methods: new, create, edit, view, delete
 - [ ] Create views for the controller's method
 - [ ] Write the appropriate tests for the controller-view interaction
-
-P.S: make sure to run bundle install
-
