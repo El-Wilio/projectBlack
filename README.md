@@ -26,21 +26,26 @@ Currently working on tweaking the User model.
 
 ##To do list for now
 
-- [ ] Finalize the User model
+- [x] Create the User Model
+- [ ] Write the appropriate tests to validate the model
 - [ ] Make a standard registration system that follows the guideline of the model (restrictions and what not)
+- [ ] Write the appropriate tests to validate the registration
 - [ ] Build a standard profile page from scratch and make editable 
+- [ ] Write the appropriate tests to validate the profile page editing
 
 ***
-
 - [ ] Create the Club model
+- [ ] Write the appropriate tests to validate the model
 - [ ] Create the club controller that will have the following methods : new, create, edit, view, delete
 - [ ] Create the club views for the controller's method.
+- [ ] Write the appropriate tests for the controller-view interaction
 
 ***
-
 - [ ] Create the Post model
+- [ ] Write the appropriate tests to validate the model
 - [ ] Create the posts Controller that will have the following methods: new, create, edit, view, delete
-- [ ] Create views for the controller,s method
+- [ ] Create views for the controller's method
+- [ ] Write the appropriate tests for the controller-view interaction
 
 P.S: make sure to run bundle install
 
