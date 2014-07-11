@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  validates :username, length: {in: 3..20}, format: {
+  validates :username, length: {in: 3..20}, uniqueness: true, format: {
     with: %r{\A(\w+\.*)+\z},
     message: "that's not a correct username my friend"
   }

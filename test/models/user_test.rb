@@ -18,6 +18,17 @@ class UserTest < ActiveSupport::TestCase
       user1.username = username
       assert user1.valid?, "#{username} should be valid"
     end
-
+    user1.username = nil
+    assert_not user1.valid?, "username cannot be nul"
   end
+
+  test "Username should be unique" do
+    assert_not users(:Rob).valid?, "Rob can not have the same username as Bran"
+    assert_not users(:Bran).valid?, "Bran can not have the same username as Rob"	
+  end
+
+  test "two passwords should not have the same encryption" do
+    assert_not_equal users(:Arya).encrypted_password, users(:Sansa).encrypted_password
+  end
+  
 end

@@ -25,12 +25,17 @@ also the Gemfile is not absolute, some gems will be removed, some will be added.
 
 Currently working on tweaking the User model. 
 
+* July 11th 2014
+
+Working on the test environment. Built a test to test the constraint of the username and if the registration page works. It has to be noted that:
+"rake test" is to the test the model and "rspec" is to the the form filling.
+
 ##To do list for now
 
 - [x] Create the User Model
 - [x] Write the appropriate tests to validate the model
-- [ ] Make a standard registration system that follows the guideline of the model (restrictions and what not)
-- [ ] Write the appropriate tests to validate the registration
+- [x] Make a standard registration system that follows the guideline of the model (restrictions and what not)
+- [x] Write the appropriate tests to validate the registration
 - [ ] Build a standard profile page from scratch and make editable 
 - [ ] Write the appropriate tests to validate the profile page editing
 

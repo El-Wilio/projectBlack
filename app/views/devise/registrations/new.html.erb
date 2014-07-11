@@ -4,6 +4,8 @@
   <%= f.error_notification %>
   <div class="input_wrapper">
     <div class="form-inputs">
+      <%= f.label :username %><br>
+      <%= f.text_field :username, required: true, size: 60, class: "form_class", autofocus: true %><br>
       <%= f.label :email %><br>
       <%= f.email_field :email, required: true, size: 60, class: "form_class", autofocus: true %><br>
       <%= f.label :password %><br>

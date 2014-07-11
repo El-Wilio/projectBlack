@@ -48,3 +48,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
 
+gem 'capybara', '~> 2.4.1', :group => :test
+
+
