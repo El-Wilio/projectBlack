@@ -28,7 +28,7 @@ Currently working on tweaking the User model.
 ##To do list for now
 
 - [x] Create the User Model
-- [ ] Write the appropriate tests to validate the model
+- [x] Write the appropriate tests to validate the model
 - [ ] Make a standard registration system that follows the guideline of the model (restrictions and what not)
 - [ ] Write the appropriate tests to validate the registration
 - [ ] Build a standard profile page from scratch and make editable 
