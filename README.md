@@ -14,6 +14,11 @@ Project Black is a code name for a social network project built in rails. More s
 * Openssl
 * Postgres 9.3 or higher when it will pass the alpha stage
 
+
+## Installation Instructions
+
+This project doesn't inclde config/database.yml so you'll have to include yourself with the appropriate server configurations.
+
 ## Gemfile
 
 Nothing to fancy in the Gemfile, you just have to run bundle install. If somehow you need to reinstall Devise from the get-go, you'd might want to check their git page. You would also need a javascript interpreter (sudo apt-get install JSON for linux users).
@@ -37,12 +42,15 @@ I also added the Capybara gem to help me with the testing environment.
 - [x] Write the appropriate tests to validate the model
 - [x] Make a standard registration system that follows the guideline of the model (restrictions and what not)
 - [x] Write the appropriate tests to validate the registration
-- [ ] Build a standard profile page from scratch and make editable 
-- [ ] Write the appropriate tests to validate the profile page editing
+- [x] Build a sign in page for users to use. 
+- [x] Write the appropriate test to validate the login process 
 
 ***
-- [ ] Create the Club model
-- [ ] Write the appropriate tests to validate the model
+- [x] Create the Club model
+- [x] Create the Tag Model
+- [x] Build the following association: club has and belongs to many users.
+- [x] Build the following association: club has and belongs to many tags.
+- [ ] Write the appropriate tests to validate the models
 - [ ] Create the club controller that will have the following methods : new, create, edit, view, delete
 - [ ] Create the club views for the controller's method.
 - [ ] Write the appropriate tests for the controller-view interaction

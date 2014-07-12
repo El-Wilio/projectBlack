@@ -21,3 +21,24 @@
 
 }
 
+#sidebar {
+  width: 15%;
+  height: calc(100%);;
+  background-color: LightSlateGray;
+  margin-right: 2em;
+  float: left;
+}
+
+.side-bar-title {
+  padding: 0.5em;
+  text-align: center;
+  padding-top: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+.side-bar-content {
+  padding: 0.5em;
+  font-size: 12;
+  color: white;
+}
