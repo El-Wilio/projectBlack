@@ -29,7 +29,8 @@ Currently working on tweaking the User model.
 
 Working on the test environment. Built a test to test the constraint of the username and if the registration page works. It has to be noted that:
 "rake test" is to the test the model and "rspec" is to the the form filling.
-
+ 
+I also added the Capybara gem to help me with the testing environment.
 ##To do list for now
 
 - [x] Create the User Model
