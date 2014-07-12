@@ -2,7 +2,7 @@
 Ned:
   username: 'Ned_Stark'
   email: 'ned_stark@theNorth.com'
-  encrypted_password: <%= User.new.send(:password_digest, 'unluckyguy123') %>
+  password: <%= User.new.send(:password_digest, 'unluckyguy123') %>
 
 Catelyn:
 #  username: Catelyn_Stark

@@ -1,8 +1,8 @@
 require "spec_helper"
 
 describe "user registration" do
-  it "allows new users to register with an email address and password" do
-    visit "/users/sign_up"
+  it "allows new users to register with an email address, username and password" do
+    visit "/register"
 
     fill_in "Username",              :with => "bob123"
     fill_in "Email",                 :with => "test@hotmail.com"
@@ -15,7 +15,7 @@ describe "user registration" do
   end
 
  it "doesn't allow new users to register with a password that is too short" do
-   visit "/users/sign_up"
+   visit "/register"
    fill_in "Username",              :with => "bob123"
    fill_in "Email",                 :with => "test@hotmail.com"
    fill_in "Password",              :with => "123"
@@ -27,7 +27,7 @@ describe "user registration" do
  end 
 
  it "doesn't allow new users to register with a password that is too long" do
-   visit "/users/sign_up"
+   visit "/register"
    fill_in "Username",              :with => "bob123"
    fill_in "Email",                 :with => "test@hotmail.com"
    fill_in "Password",              :with => "this password is way too long but I will still try to pass it!!!!!!!!"
@@ -39,7 +39,7 @@ describe "user registration" do
  end
 
  it "doesn't allow new users to register if the password confirmation field doesn't match" do
-   visit "/users/sign_up"
+   visit "/register"
    fill_in "Username",              :with => "bob123"
    fill_in "Email",                 :with => "test@hotmail.com"
    fill_in "Password",              :with => "back_to_the_future"
