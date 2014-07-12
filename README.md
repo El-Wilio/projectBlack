@@ -34,6 +34,10 @@ Currently working on tweaking the User model.
 
 Working on the test environment. Built a test to test the constraint of the username and if the registration page works. It has to be noted that:
 "rake test" is to the test the model and "rspec" is to the the form filling.
+
+* July 12th 2014
+
+Worked on the models Tag and Club and wrote the appropriate tests to validate them. Next step is to work on the club controller.
  
 I also added the Capybara gem to help me with the testing environment.
 ##To do list for now
@@ -50,8 +54,8 @@ I also added the Capybara gem to help me with the testing environment.
 - [x] Create the Tag Model
 - [x] Build the following association: club has and belongs to many users.
 - [x] Build the following association: club has and belongs to many tags.
-- [ ] Write the appropriate tests to validate the models
-- [ ] Create the club controller that will have the following methods : new, create, edit, view, delete
+- [x] Write the appropriate tests to validate the models
+- [x] Create the club controller that will have the following methods : new, create, edit, view, delete
 - [ ] Create the club views for the controller's method.
 - [ ] Write the appropriate tests for the controller-view interaction
 
