@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712065102) do
+ActiveRecord::Schema.define(version: 20140712071435) do
 
   create_table "clubs", force: true do |t|
     t.string   "name"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "permalink"
   end
 
   create_table "clubs_tags", id: false, force: true do |t|
@@ -27,6 +28,15 @@ ActiveRecord::Schema.define(version: 20140712065102) do
 
   add_index "clubs_tags", ["club_id"], name: "index_clubs_tags_on_club_id"
   add_index "clubs_tags", ["tag_id"], name: "index_clubs_tags_on_tag_id"
+
+  create_table "clubs_users", id: false, force: true do |t|
+    t.integer "club_id"
+    t.integer "user_id"
+    t.integer "power"
+  end
+
+  add_index "clubs_users", ["club_id"], name: "index_clubs_users_on_club_id"
+  add_index "clubs_users", ["user_id"], name: "index_clubs_users_on_user_id"
 
   create_table "tags", force: true do |t|
     t.string   "name"
