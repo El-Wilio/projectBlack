@@ -1,0 +1,17 @@
+#examples of clubs for the website
+Potatoes:
+  name: "The Potato Club"
+  description: "A club about potatoes and their nutritive values"
+  permalink: "potatoes"
+
+Cookies:
+  name: "All about Cookies"
+  permalink: "cookie"
+
+KitKat:
+  description: "all about the android api."
+  permalink: "android"
+
+Gangsta:
+  name: "rap music heaven"
+  description: "all about rap music from underground to mainstream. WE GANGSTA"

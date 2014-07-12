@@ -13,7 +13,7 @@ class Club < ActiveRecord::Base
   }
 
 
-  validates :description, length: {in: 5..128}, format:  {
+  validates :description, format: {
     with: %r{\A[a-z]+[\.!?']*(\s{1}[a-z]+[\.!?']*)*\z}i,
     message: "invalid description"
   } 
