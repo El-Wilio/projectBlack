@@ -1,6 +1,12 @@
-.form-inputs {
- width: 75%;
- margin: 5px;
- position: relative;
+label.label {
+ display: block;
+ color: maroon;
+ font-weight: bold;
+ font-size: 11pt;
+ padding-bottom: 1em;
 }
 
+.notice {
+  color: darkred;
+  font-size: 9pt;
+}

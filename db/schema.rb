@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712071435) do
+ActiveRecord::Schema.define(version: 20140713052132) do
 
   create_table "clubs", force: true do |t|
     t.string   "name"
@@ -22,21 +22,19 @@ ActiveRecord::Schema.define(version: 20140712071435) do
   end
 
   create_table "clubs_tags", id: false, force: true do |t|
-    t.integer "club_id"
-    t.integer "tag_id"
+    t.integer "club_id", null: false
+    t.integer "tag_id",  null: false
   end
-
-  add_index "clubs_tags", ["club_id"], name: "index_clubs_tags_on_club_id"
-  add_index "clubs_tags", ["tag_id"], name: "index_clubs_tags_on_tag_id"
 
   create_table "clubs_users", id: false, force: true do |t|
-    t.integer "club_id"
-    t.integer "user_id"
-    t.integer "power"
+    t.integer "club_id",  null: false
+    t.integer "user_id",  null: false
+    t.integer "power_id"
   end
 
-  add_index "clubs_users", ["club_id"], name: "index_clubs_users_on_club_id"
-  add_index "clubs_users", ["user_id"], name: "index_clubs_users_on_user_id"
+  create_table "powers", force: true do |t|
+    t.string "role"
+  end
 
   create_table "tags", force: true do |t|
     t.string   "name"

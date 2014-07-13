@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :clubs
 
-  validates :username, length: {in: 3..20}, uniqueness: true, format: {
+  validates :username, length: {in: 3..20}, uniqueness: { case_sensitive: false}, format: {
     with: %r{\A(\w+\.*)+\z},
     message: "that's not a correct username my friend"
   }

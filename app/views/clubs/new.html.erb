@@ -1,2 +1,26 @@
-<h1>Clubs#new</h1>
-<p>Find me in app/views/clubs/new.html.erb</p>
+<% if !current_user.nil? %>
+
+<h1>Create a new club</h1>
+
+<p> This page is a form to help the user create its own club. Please follow the guidelines </p>
+
+<%= form_for @club, url: {action: "create"} do |f| %>
+<p>
+  <%= f.label :Club_Name, class: "label" %> 
+  <%= f.text_field :name, size: "50", maxlength: "50" %><br>
+  <span class="notice">A club name should reflect the goal of the club. I.E: The Music Club should be about music.</span>
+</p>
+<p>
+  <%= f.label :Description, class: "label" %>
+  <%= f.text_field :description, size: "128", maxlength: "128" %><br>
+  <span class="notice">Describe your club in 128 characters or less. I.E: Discuss, share and talk about music, artists and other music related stuff."</span>
+</p>
+<p>
+  <%= f.label :permalink, class: "label" %>
+  <%= f.text_field :permalink, size: "30", maxlength: "30" %> <span class="notice"> this will the url for your club: \c\permalink</span>
+</p>
+<%= f.submit "Create a club" %>
+<% end %>
+<% else %>
+<p>Only registered users are able to create a club</p>
+<% end %>
