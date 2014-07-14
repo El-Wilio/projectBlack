@@ -3,7 +3,15 @@ class Club < ActiveRecord::Base
   before_validation :default_description
 
   has_and_belongs_to_many :users
-  has_and_belongs_to_many :tags
+  has_and_belongs_to_many :tags do
+    def << (value)
+      if Tag.find_by_name(value).nil?
+         tag = Tag.create!(name: value)
+      end
+      super Tag.find_by_name(value)
+    end  
+  end         
+
 
   #Insert validation for club name and description here.
 

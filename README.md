@@ -38,6 +38,10 @@ Working on the test environment. Built a test to test the constraint of the user
 * July 12th 2014
 
 Worked on the models Tag and Club and wrote the appropriate tests to validate them. Next step is to work on the club controller.
+
+* July 13th 2014
+
+I worked with the join table of club and tags by overriding the method <<. Basically, if a tag doesn't exist yet, it will automatically create one. This step requires some testing that I didn't do yet.
  
 I also added the Capybara gem to help me with the testing environment.
 ##To do list for now

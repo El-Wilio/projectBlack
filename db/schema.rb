@@ -14,17 +14,22 @@
 ActiveRecord::Schema.define(version: 20140713052132) do
 
   create_table "clubs", force: true do |t|
-    t.string   "name"
+    t.string   "name",        null: false
     t.string   "description"
+    t.string   "permalink",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "permalink"
   end
+
+  add_index "clubs", ["name"], name: "index_clubs_on_name"
+  add_index "clubs", ["permalink"], name: "index_clubs_on_permalink", unique: true
 
   create_table "clubs_tags", id: false, force: true do |t|
     t.integer "club_id", null: false
     t.integer "tag_id",  null: false
   end
+
+  add_index "clubs_tags", ["club_id", "tag_id"], name: "index_clubs_tags_on_club_id_and_tag_id", unique: true
 
   create_table "clubs_users", id: false, force: true do |t|
     t.integer "club_id",  null: false
@@ -42,23 +47,26 @@ ActiveRecord::Schema.define(version: 20140713052132) do
     t.datetime "updated_at"
   end
 
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",      null: false
+    t.string   "username",               default: "Guest", null: false
+    t.string   "encrypted_password",     default: "",      null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,       null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username",               default: "", null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'clubs/new'
 
-  get 'clubs/create'
+  post 'clubs/create'
 
   get 'clubs/update'
 
